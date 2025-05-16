@@ -1,0 +1,4 @@
+Tiempo de ejecución: 0.023044 segundos
+
+Salida del programa:
+Por favor, ingrese un número entero válido.

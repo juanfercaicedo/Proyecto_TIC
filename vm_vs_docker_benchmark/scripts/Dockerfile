@@ -35,7 +35,7 @@ RUN pip install --no-cache-dir \
     matplotlib
 
 # Compila el archivo C++
-RUN g++ /app/Sucesionfibonacci.cpp -o /app/sucesion_cpp
+RUN g++ Sucesionfibonacci.cpp -o sucesion_cpp
 
 # Comando por defecto
 CMD ["python", "Sucesionfibonacci.py"]

@@ -1,3 +1,5 @@
+import sys
+
 def fibonacci(userInput):
     sequence = []
 
@@ -15,10 +17,12 @@ def fibonacci(userInput):
 
     return sequence
 
-# Solicita el número de términos al usuario
+# Lee el número desde los argumentos del sistema
 try:
-    n = int(input("Ingrese la cantidad de términos de la sucesión de Fibonacci: "))
+    if len(sys.argv) < 2:
+        raise ValueError("Falta argumento")
 
+    n = int(sys.argv[1])
     print("\nSucesión de Fibonacci:")
     print(fibonacci(n))
 except ValueError:
