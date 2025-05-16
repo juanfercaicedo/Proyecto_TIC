@@ -1,10 +1,12 @@
 function fibonacciSequence(n) {
     const sequence = [];
 
-    if (n <= 0) return sequence;
+    if (n <= 0) 
+    return sequence;
 
     sequence.push(0);
-    if (n === 1) return sequence;
+    if (n === 1) 
+    return sequence;
 
     sequence.push(1);
     for (let i = 2; i < n; i++) {
