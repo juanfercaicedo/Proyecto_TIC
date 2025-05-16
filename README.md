@@ -20,8 +20,8 @@ Comparar el rendimiento y la experiencia al desarrollar y ejecutar aplicaciones 
 
 - **Lenguajes**: Python, JavaScript, C++
 - **Herramientas de medición**: `time`, `hyperfine`
-- **Scripts sugeridos**:
-  - Cálculo de Fibonacci
+- **Scripts que se van a ocupar**:
+  - Cálculo de Fibonacci(100 términos)
   - Algoritmo de ordenamiento (ej. quicksort)
   - Lectura y procesamiento de archivos
 
@@ -41,6 +41,7 @@ Comparar el rendimiento y la experiencia al desarrollar y ejecutar aplicaciones 
 - ¿Cuánto tarda en estar listo para ejecutar un script?
   - Docker: desde `docker run`
   - VM: desde arranque hasta login y terminal disponible
+  - Host: ejecución desde `terminal`
 
 ---
 
@@ -53,7 +54,6 @@ Comparar el rendimiento y la experiencia al desarrollar y ejecutar aplicaciones 
 ### ✍️ Experiencia de desarrollo
 
 - Uso de editores de texto: `VS Code`, `nano`
-- Facilidad para escribir, guardar y ejecutar código
 
 ### 🔁 Portabilidad del proyecto
 
