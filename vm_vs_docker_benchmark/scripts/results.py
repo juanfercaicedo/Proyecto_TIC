@@ -2,19 +2,19 @@ import subprocess
 import time
 import os
 
-RESULTS_DIR = "../results"
+RESULTS_DIR = "../results-vm"
 os.makedirs(RESULTS_DIR, exist_ok=True)
 
 # Archivos fuente por lenguaje
 sources = {
-    "python": "Sucesionfibonacci.py",
+    "python3": "Sucesionfibonacci.py",
     "java": "Sucesionfibonacci.java",
     "javascript": "Sucesionfibonacci.js"
 }
 
 # Comandos de ejecución por lenguaje
 commands = {
-    "python": ["python", sources["python"]],
+    "python3": ["python3", sources["python3"]],
     "java": ["java", "Sucesionfibonacci"],
     "javascript": ["node", sources["javascript"]]
 }
@@ -57,7 +57,8 @@ def main():
     java_compilado = compilar_java()
 
     for idioma in commands:
-        if not os.path.exists(sources[idioma]):
+        # Verificamos si el archivo fuente existe
+        if idioma in sources and not os.path.exists(sources[idioma]):
             print(f"Archivo fuente de {idioma} no encontrado, saltando...")
             continue
 

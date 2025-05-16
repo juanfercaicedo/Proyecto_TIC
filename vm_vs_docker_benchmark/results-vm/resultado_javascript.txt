@@ -1,4 +1,4 @@
-Tiempo de ejecución: 0.275006 segundos
+Tiempo de ejecución: 0.096058 segundos
 
 Salida del programa:
 Ingrese el número de términos de la sucesión de Fibonacci: Secuencia de Fibonacci:
