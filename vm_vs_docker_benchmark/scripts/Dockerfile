@@ -3,15 +3,8 @@ FROM python:3.12-slim
 # Instala dependencias necesarias
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-    gcc \
-    g++ \
-    libpq-dev \
-    libffi-dev \
-    libssl-dev \
-    build-essential \
-    python3-dev \
+    openjdk-17-jdk \
     curl \
-    git \
     ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
@@ -26,16 +19,15 @@ WORKDIR /app
 # Copia los archivos al contenedor
 COPY Sucesionfibonacci.py /app/Sucesionfibonacci.py
 COPY Sucesionfibonacci.js /app/Sucesionfibonacci.js
-COPY Sucesionfibonacci.cpp /app/Sucesionfibonacci.cpp
+COPY Sucesionfibonacci.java /app/Sucesionfibonacci.java
 
-
-# Instala paquetes de Python
+# Instala paquetes de Python si los necesitas
 RUN pip install --no-cache-dir \
     numpy \
     matplotlib
 
-# Compila el archivo C++
-RUN g++ Sucesionfibonacci.cpp -o sucesion_cpp
+# Compila el archivo Java
+RUN javac Sucesionfibonacci.java
 
-# Comando por defecto
+# Comando por defecto (puedes elegir cuál ejecutar)
 CMD ["python", "Sucesionfibonacci.py"]

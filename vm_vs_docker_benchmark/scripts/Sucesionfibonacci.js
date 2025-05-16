@@ -22,14 +22,14 @@ const readline = require('readline').createInterface({
     output: process.stdout
 });
 
-readline.question('Enter the number of Fibonacci terms to generate: ', (input) => {
+readline.question('Ingrese el número de términos de la sucesión de Fibonacci: ', (input) => {
     const terms = parseInt(input);
 
     if (isNaN(terms) || terms < 0) {
         console.log('Please enter a valid non-negative integer.');
     } else {
         const sequence = fibonacciSequence(terms);
-        console.log('Fibonacci sequence:');
+        console.log('Secuencia de Fibonacci:');
         console.log(sequence.join(' '));
     }
 

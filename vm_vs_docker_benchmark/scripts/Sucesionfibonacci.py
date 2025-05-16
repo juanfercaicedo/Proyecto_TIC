@@ -1,29 +1,23 @@
-import sys
-
-def fibonacci(userInput):
-    sequence = []
-
-    if userInput <= 0:
-        return sequence
-    elif userInput == 1:
+def fibonacci_series(length):
+    if length <= 0:
+        return []
+    elif length == 1:
         return [0]
-    elif userInput == 2:
+    elif length == 2:
         return [0, 1]
 
-    sequence = [0, 1]
-    for i in range(2, userInput):
-        next_value = sequence[i - 1] + sequence[i - 2]
-        sequence.append(next_value)
+    series = [0, 1]
+    for _ in range(2, length):
+        series.append(series[-1] + series[-2])
+    return series
 
-    return sequence
+def main():
+    try:
+        n = int(input("Ingrese la longitud de la serie de Fibonacci: "))
+        series = fibonacci_series(n)
+        print("Serie de Fibonacci:", series)
+    except ValueError:
+        print("Por favor, ingrese un número entero válido.")
 
-# Lee el número desde los argumentos del sistema
-try:
-    if len(sys.argv) < 2:
-        raise ValueError("Falta argumento")
-
-    n = int(sys.argv[1])
-    print("\nSucesión de Fibonacci:")
-    print(fibonacci(n))
-except ValueError:
-    print("Por favor, ingrese un número entero válido.")
+if __name__ == "__main__":
+    main()
