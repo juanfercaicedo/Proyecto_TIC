@@ -18,7 +18,7 @@ Comparar el rendimiento y la experiencia al desarrollar y ejecutar aplicaciones 
 
 ### ⏱️ Tiempo de ejecución de scripts
 
-- **Lenguajes**: Python, JavaScript, C++
+- **Lenguajes**: Python, JavaScript, Java
 - **Herramientas de medición**: `time`, `hyperfine`
 - **Scripts que se van a ocupar**:
   - Cálculo de Fibonacci(100 términos)
@@ -65,7 +65,7 @@ Comparar el rendimiento y la experiencia al desarrollar y ejecutar aplicaciones 
 
 | Categoría | Herramientas                                          |
 | --------- | ----------------------------------------------------- |
-| Lenguajes | Python, JavaScript , C++                              |
+| Lenguajes | Python, JavaScript , Java                             |
 | Entornos  | Docker, VirtualBox (Ubuntu), Host                     |
 | Medición  | `time`, `hyperfine`, `htop`, `vmstat`, `docker stats` |
 | Edición   | VS Code, nano                                         |
